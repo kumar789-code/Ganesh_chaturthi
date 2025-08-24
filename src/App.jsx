@@ -8,6 +8,7 @@ import MandalaBackground from "./components/MandalaBackground";
 import Greeting from "./components/Greeting";
 import AartiTray from "./components/AartiTray";
 import Rat from "./components/Rat";
+import chant from "/assets/chant.mp3";
 import "./App.css";
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
       <p className="creator">by Kumar</p>
 
       <audio id="chantAudio" loop>
-        <source src="/assets/chant.mp3" type="audio/mpeg" />
+        <source src={chant} type="audio/mpeg" />
       </audio>
     </div>
   );

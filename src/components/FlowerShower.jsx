@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
-
+import flower1 from "../assets/flower1.jpeg";
+import flower2 from "../assets/flower2.jpeg";
+import flower3 from "../assets/flower3.jpeg";
+import flower4 from "../assets/flower.jpeg";
 const FlowerShower = () => {
   const [flowers, setFlowers] = useState([]);
 
   // List of flower images
-  const flowerImages = [
-    "/assets/flower1.jpeg",
-    "/assets/flower.jpeg",
-    "/assets/flower3.jpeg",
-    "/assets/flower2.jpeg",
-  ];
+  const flowerImages = [flower1, flower2, flower3, flower4];
 
   useEffect(() => {
     const interval = setInterval(() => {
