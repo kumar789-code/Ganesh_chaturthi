@@ -1,6 +1,6 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* 
   ==========================================================================
   CSS Variables (Custom Properties) for Easy Responsiveness
@@ -243,3 +243,35 @@ body {
     font-size: 0.9rem;
   }
 }
+
+
+.creator {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 0.85rem; /* Small and subtle */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7); /* Off-white for a soft look */
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Soft shadow for readability */
+    z-index: 100; /* Ensure it's on top */
+    transition: color 0.3s;
+}
+.creator:hover {
+    color: rgba(255, 255, 255, 1); /* Becomes fully white on hover */
+}
+
+@media (max-width: 480px) {
+    .creator {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+  }

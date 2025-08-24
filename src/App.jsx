@@ -54,6 +54,7 @@ function App() {
         <Diya />
         <Diya />
       </div>
+      <p className="creator">by Kumar</p>
 
       <audio id="chantAudio" loop>
         <source src="/assets/chant.mp3" type="audio/mpeg" />
