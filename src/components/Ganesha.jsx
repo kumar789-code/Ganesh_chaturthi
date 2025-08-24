@@ -1,5 +1,5 @@
 import "../App.css";
-import ganesha from "/assets/ganesha.svg";
+import ganesha from "../assets/ganesha.svg";
 
 const Ganesha = () => {
   return (

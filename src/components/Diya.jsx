@@ -1,5 +1,5 @@
 import { useState } from "react";
-import diya from "/assets/diya.svg"
+import diya from "../assets/diya.svg"
 const Diya = () => {
   const [lit, setLit] = useState(false);
 
