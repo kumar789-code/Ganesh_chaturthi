@@ -21,18 +21,31 @@
 
 /* Base Body and App Styles */
 body {
-  margin: 0;
-  background: radial-gradient(circle at top, #ffcc70, #ff6f61, #b30000);
-  font-family: "Poppins", sans-serif;
-  overflow: hidden;
+    margin: 0;
+    background: radial-gradient(circle at top, #ffcc70, #ff6f61, #b30000);
+    font-family: "Poppins", sans-serif;
+    /* Instead of just overflow hidden */
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100dvh; /* Dynamic viewport height for mobile */
 }
 
 .app-container {
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
+    text-align: center;
+    position: relative;
+    min-height: 100dvh; /* Adjusts for mobile screen */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps greeting at top and diyas at bottom */
 }
+
+@supports (padding: max(0px)) {
+    body {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+  
 
 /* Mandala Background */
 .mandala-bg {
@@ -165,6 +178,11 @@ body {
   border-radius: 50% 50% 50% 50%;
   transform: translateX(-50%); animation: flicker 0.2s infinite alternate;
 }
+
+.diyas {
+    bottom: max(10px, env(safe-area-inset-bottom));
+}
+  
 @keyframes flicker {
   from { transform: translateX(-50%) scaleY(1); opacity: 0.9; }
   to { transform: translateX(-50%) scaleY(1.2); opacity: 1; }
